@@ -8,6 +8,8 @@ set(SFML_DIR "C:/Libraries/SFML/SFML-3.1.0/lib/cmake/SFML")
 
 find_package(SFML 3 REQUIRED COMPONENTS Graphics Window System)
 
-add_executable(ballClickerGame src/main.cpp)
+add_executable(ballClickerGame src/main.cpp src/Ball.cpp)
 
 target_link_libraries(ballClickerGame SFML::Graphics SFML::Window SFML::System)
+
+target_include_directories(ballClickerGame PRIVATE include)
